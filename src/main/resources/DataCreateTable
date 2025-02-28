@@ -1,0 +1,58 @@
+Script de criação de banco de dados:
+
+CREATE TABLE tb_account (
+    id BIGSERIAL PRIMARY KEY,
+    number VARCHAR(255) UNIQUE NOT NULL,
+    agency VARCHAR(255) NOT NULL,
+    balance NUMERIC(13,2) NOT NULL,
+    additional_limit NUMERIC(13,2) NOT NULL
+);
+
+CREATE TABLE base_item (
+    id BIGSERIAL PRIMARY KEY,
+    icon VARCHAR(255),
+    description TEXT
+);
+
+CREATE TABLE tb_card (
+    id BIGSERIAL PRIMARY KEY,
+    number VARCHAR(255) UNIQUE NOT NULL,
+    available_limit NUMERIC(13,2) NOT NULL
+);
+
+CREATE TABLE tb_feature (
+    id BIGSERIAL PRIMARY KEY,
+    icon VARCHAR(255),
+    description TEXT
+);
+
+CREATE TABLE tb_news (
+    id BIGSERIAL PRIMARY KEY,
+    icon VARCHAR(255),
+    description TEXT
+);
+
+CREATE TABLE tb_users (
+    id BIGSERIAL PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    account_id BIGINT UNIQUE,
+    card_id BIGINT UNIQUE,
+    FOREIGN KEY (account_id) REFERENCES tb_account(id) ON DELETE CASCADE,
+    FOREIGN KEY (card_id) REFERENCES tb_card(id) ON DELETE CASCADE
+);
+
+CREATE TABLE tb_users_features (
+    user_id BIGINT NOT NULL,
+    features_id BIGINT NOT NULL,
+    PRIMARY KEY (user_id, feature_id),
+    FOREIGN KEY (user_id) REFERENCES tb_users(id) ON DELETE CASCADE,
+    FOREIGN KEY (feature_id) REFERENCES tb_feature(id) ON DELETE CASCADE
+);
+
+CREATE TABLE tb_users_news (
+    user_id BIGINT NOT NULL,
+    news_id BIGINT NOT NULL,
+    PRIMARY KEY (user_id, news_id),
+    FOREIGN KEY (user_id) REFERENCES tb_users(id) ON DELETE CASCADE,
+    FOREIGN KEY (news_id) REFERENCES tb_news(id) ON DELETE CASCADE
+);
