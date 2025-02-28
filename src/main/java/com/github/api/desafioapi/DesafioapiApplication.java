@@ -1,4 +1,4 @@
-package com.github.wesleyav.desafioapi;
+package com.github.api.desafioapi;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

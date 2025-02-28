@@ -1,4 +1,4 @@
-package com.github.wesleyav.desafioapi.controllers;
+package com.github.api.desafioapi.controllers;
 
 import java.net.URI;
 
@@ -17,8 +17,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-import com.github.wesleyav.desafioapi.entities.User;
-import com.github.wesleyav.desafioapi.services.UserService;
+import com.github.api.desafioapi.entities.User;
+import com.github.api.desafioapi.services.UserService;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;

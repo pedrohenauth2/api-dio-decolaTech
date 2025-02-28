@@ -1,4 +1,4 @@
-package com.github.wesleyav.desafioapi.controllers.exceptions;
+package com.github.api.desafioapi.controllers.exceptions;
 
 import java.time.Instant;
 
@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
-import com.github.wesleyav.desafioapi.services.exceptions.ResourceEmptyException;
-import com.github.wesleyav.desafioapi.services.exceptions.ResourceNotFoundException;
+import com.github.api.desafioapi.services.exceptions.ResourceEmptyException;
+import com.github.api.desafioapi.services.exceptions.ResourceNotFoundException;
 
 import jakarta.servlet.http.HttpServletRequest;
 

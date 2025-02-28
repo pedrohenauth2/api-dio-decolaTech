@@ -1,4 +1,4 @@
-package com.github.wesleyav.desafioapi.services.exceptions;
+package com.github.api.desafioapi.services.exceptions;
 
 public class ResourceEmptyException extends RuntimeException {
 

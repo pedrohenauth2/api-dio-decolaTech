@@ -1,4 +1,4 @@
-package com.github.wesleyav.desafioapi.services;
+package com.github.api.desafioapi.services;
 
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.data.domain.Page;
@@ -6,10 +6,10 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-import com.github.wesleyav.desafioapi.entities.User;
-import com.github.wesleyav.desafioapi.repositories.UserRepository;
-import com.github.wesleyav.desafioapi.services.exceptions.ResourceEmptyException;
-import com.github.wesleyav.desafioapi.services.exceptions.ResourceNotFoundException;
+import com.github.api.desafioapi.entities.User;
+import com.github.api.desafioapi.repositories.UserRepository;
+import com.github.api.desafioapi.services.exceptions.ResourceEmptyException;
+import com.github.api.desafioapi.services.exceptions.ResourceNotFoundException;
 
 import jakarta.transaction.Transactional;
 

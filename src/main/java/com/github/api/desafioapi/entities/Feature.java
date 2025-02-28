@@ -1,4 +1,4 @@
-package com.github.wesleyav.desafioapi.entities;
+package com.github.api.desafioapi.entities;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
